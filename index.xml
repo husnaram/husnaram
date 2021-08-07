@@ -16,7 +16,7 @@
       <guid>https://husnaram.github.io/posts/membuat-access-point-di-archlinux/</guid>
       <description>Awalnya browsing untuk mencari tahu cara menampilkan preview development web yang ada di laptop ke smartphone tanpa internet atau simpelnya tanpa di deploy.
 Tapi, logicnya si laptop ini mesti terkonesi dengan smartphone, lalu solusi muncul yaitu dengna AP (access point) atau hotspot yand dipancarkan laptop, kemudian diakses via smartphone.
-Hasil browsingnya ada di sini [https://jagongoding.com/linux/arch-linux/tutorial-share-koneksi-wifi-hotspot-di-arch-linux/](Tutorial Share Koneksi Wifi (Hotspot) di Arch Linux ).
+Hasil browsingnya ada di sini Tutorial Share Koneksi Wifi (Hotspot) di Arch Linux.
 Saat menerapkan tutorial tersebut ada kendala saat membuat access pointnya.</description>
     </item>
     

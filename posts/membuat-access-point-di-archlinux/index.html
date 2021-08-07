@@ -7,7 +7,7 @@
 	<meta property="og:title" content="Membuat Access Point Di Archlinux" />
 <meta property="og:description" content="Awalnya browsing untuk mencari tahu cara menampilkan preview development web yang ada di laptop ke smartphone tanpa internet atau simpelnya tanpa di deploy.
 Tapi, logicnya si laptop ini mesti terkonesi dengan smartphone, lalu solusi muncul yaitu dengna AP (access point) atau hotspot yand dipancarkan laptop, kemudian diakses via smartphone.
-Hasil browsingnya ada di sini [https://jagongoding.com/linux/arch-linux/tutorial-share-koneksi-wifi-hotspot-di-arch-linux/](Tutorial Share Koneksi Wifi (Hotspot) di Arch Linux ).
+Hasil browsingnya ada di sini Tutorial Share Koneksi Wifi (Hotspot) di Arch Linux.
 Saat menerapkan tutorial tersebut ada kendala saat membuat access pointnya." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://husnaram.github.io/posts/membuat-access-point-di-archlinux/" /><meta property="article:section" content="posts" />
@@ -18,7 +18,7 @@ Saat menerapkan tutorial tersebut ada kendala saat membuat access pointnya." />
 <meta name="twitter:title" content="Membuat Access Point Di Archlinux"/>
 <meta name="twitter:description" content="Awalnya browsing untuk mencari tahu cara menampilkan preview development web yang ada di laptop ke smartphone tanpa internet atau simpelnya tanpa di deploy.
 Tapi, logicnya si laptop ini mesti terkonesi dengan smartphone, lalu solusi muncul yaitu dengna AP (access point) atau hotspot yand dipancarkan laptop, kemudian diakses via smartphone.
-Hasil browsingnya ada di sini [https://jagongoding.com/linux/arch-linux/tutorial-share-koneksi-wifi-hotspot-di-arch-linux/](Tutorial Share Koneksi Wifi (Hotspot) di Arch Linux ).
+Hasil browsingnya ada di sini Tutorial Share Koneksi Wifi (Hotspot) di Arch Linux.
 Saat menerapkan tutorial tersebut ada kendala saat membuat access pointnya."/>
 <script src="https://husnaram.github.io/js/feather.min.js"></script>
 	
@@ -59,12 +59,10 @@ Saat menerapkan tutorial tersebut ada kendala saat membuat access pointnya."/>
 			<section class="body">
 				<p>Awalnya browsing untuk mencari tahu cara menampilkan preview development web yang ada di laptop ke smartphone tanpa internet atau simpelnya tanpa di deploy.</p>
 <p>Tapi, logicnya si laptop ini mesti terkonesi dengan smartphone, lalu solusi muncul yaitu dengna AP (access point) atau hotspot yand dipancarkan laptop, kemudian diakses via smartphone.</p>
-<p>Hasil browsingnya ada di sini [https://jagongoding.com/linux/arch-linux/tutorial-share-koneksi-wifi-hotspot-di-arch-linux/](Tutorial Share Koneksi Wifi (Hotspot) di Arch Linux
-).</p>
+<p>Hasil browsingnya ada di sini <a href="https://jagongoding.com/linux/arch-linux/tutorial-share-koneksi-wifi-hotspot-di-arch-linux/">Tutorial Share Koneksi Wifi (Hotspot) di Arch Linux</a>.</p>
 <p>Saat menerapkan tutorial tersebut ada kendala saat membuat access pointnya.</p>
 <p>Jelasnya ketika command ini <code>sudo create_ap wlp2s0 wlp2s0 archer passang</code>. Hasilnya keluar error <code>ERROR: Failed to initialize lock</code>.</p>
-<p>Langsung saja google lagi, dan tentu saja hasilnya ada di &ldquo;issues&quot;nya repo &lsquo;create_ap&rsquo; sendiri, di sini [https://github.com/oblique/create_ap/issues/384](Failed to initialize lock error #384
-).</p>
+<p>Langsung saja google lagi, dan tentu saja hasilnya ada di &ldquo;issues&quot;nya repo &lsquo;create_ap&rsquo; sendiri, di sini <a href="https://github.com/oblique/create_ap/issues/384">Failed to initialize lock error #384</a>.</p>
 <p>Solusinya cukup menghapus file <code>create_ap.all.lock</code>, dengan command <code>sudo rm /tmp/create_ap.all.lock</code>.</p>
 <p>And done. Buka smartphone, enable wifi, lalu scan. Detected.</p>
 
