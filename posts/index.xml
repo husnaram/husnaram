@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Husna</copyright>
-    <lastBuildDate>Wed, 19 May 2021 11:22:50 +0700</lastBuildDate><atom:link href="https://husnaram.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Aug 2021 19:42:19 +0700</lastBuildDate><atom:link href="https://husnaram.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Membuat Access Point Di Archlinux</title>
+      <link>https://husnaram.github.io/posts/membuat-access-point-di-archlinux/</link>
+      <pubDate>Sat, 07 Aug 2021 19:42:19 +0700</pubDate>
+      
+      <guid>https://husnaram.github.io/posts/membuat-access-point-di-archlinux/</guid>
+      <description>Awalnya browsing untuk mencari tahu cara menampilkan preview development web yang ada di laptop ke smartphone tanpa internet atau simpelnya tanpa di deploy.
+Tapi, logicnya si laptop ini mesti terkonesi dengan smartphone, lalu solusi muncul yaitu dengna AP (access point) atau hotspot yand dipancarkan laptop, kemudian diakses via smartphone.
+Hasil browsingnya ada di sini [https://jagongoding.com/linux/arch-linux/tutorial-share-koneksi-wifi-hotspot-di-arch-linux/](Tutorial Share Koneksi Wifi (Hotspot) di Arch Linux ).
+Saat menerapkan tutorial tersebut ada kendala saat membuat access pointnya.</description>
+    </item>
+    
     <item>
       <title>How to Access USB Drive That Linux Booted From</title>
       <link>https://husnaram.github.io/posts/how-to-access-usb-drive-that-linux-booted-from/</link>

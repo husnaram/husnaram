@@ -2,19 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://husnaram.github.io/posts/membuat-access-point-di-archlinux/</loc>
+    <lastmod>2021-08-07T19:42:19+07:00</lastmod>
+  </url><url>
+    <loc>https://husnaram.github.io/posts/</loc>
+    <lastmod>2021-08-07T19:42:19+07:00</lastmod>
+  </url><url>
+    <loc>https://husnaram.github.io/</loc>
+    <lastmod>2021-08-07T19:42:19+07:00</lastmod>
+  </url><url>
     <loc>https://husnaram.github.io/posts/how-to-access-usb-drive-that-linux-booted-from/</loc>
     <lastmod>2021-05-19T11:22:50+07:00</lastmod>
   </url><url>
     <loc>https://husnaram.github.io/tags/linux/</loc>
     <lastmod>2021-05-19T11:22:50+07:00</lastmod>
   </url><url>
-    <loc>https://husnaram.github.io/posts/</loc>
-    <lastmod>2021-05-19T11:22:50+07:00</lastmod>
-  </url><url>
     <loc>https://husnaram.github.io/tags/</loc>
-    <lastmod>2021-05-19T11:22:50+07:00</lastmod>
-  </url><url>
-    <loc>https://husnaram.github.io/</loc>
     <lastmod>2021-05-19T11:22:50+07:00</lastmod>
   </url><url>
     <loc>https://husnaram.github.io/posts/make-word-transform-to-uppercase-in-first-char-each/</loc>
