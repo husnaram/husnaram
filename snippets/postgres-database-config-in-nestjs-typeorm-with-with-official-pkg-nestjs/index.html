@@ -3,16 +3,16 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta property="og:image" content>
 <meta property="og:title" content="Postgres database config in Nestjs TypeORM with official pkg @nestjs/config">
-<meta property="og:description" content="import { ClassSerializerInterceptor, Module } from '@nestjs/common'; import { APP_INTERCEPTOR } from '@nestjs/core'; import { TypeOrmModule } from '@nestjs/typeorm'; import { AuthModule } from './auth/auth.module'; import { UsersModule } from './users/users.module'; import { LinksModule } from './links/links.module'; import { ResponWrapperInterceptor } from './common/interceptors/respon-wrapper.interceptor'; import { ConfigModule, ConfigService } from '@nestjs/config'; @Module({ imports: [ AuthModule, UsersModule, LinksModule, TypeOrmModule.forRootAsync({ imports: [ ConfigModule.forRoot({ envFilePath: '.env', }) ], useFactory: async (configService: ConfigService) => ({ type: 'postgres', host: configService.">
+<meta property="og:description" content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45  import { ClassSerializerInterceptor, Module } from '@nestjs/common'; import { APP_INTERCEPTOR } from '@nestjs/core'; import { TypeOrmModule } from '@nestjs/typeorm'; import { AuthModule } from '.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://husnaram.github.io/snippets/postgres-database-config-in-nestjs-typeorm-with-with-official-pkg-nestjs/"><meta property="article:section" content="snippets">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Postgres database config in Nestjs TypeORM with official pkg @nestjs/config">
-<meta name=twitter:description content="import { ClassSerializerInterceptor, Module } from '@nestjs/common'; import { APP_INTERCEPTOR } from '@nestjs/core'; import { TypeOrmModule } from '@nestjs/typeorm'; import { AuthModule } from './auth/auth.module'; import { UsersModule } from './users/users.module'; import { LinksModule } from './links/links.module'; import { ResponWrapperInterceptor } from './common/interceptors/respon-wrapper.interceptor'; import { ConfigModule, ConfigService } from '@nestjs/config'; @Module({ imports: [ AuthModule, UsersModule, LinksModule, TypeOrmModule.forRootAsync({ imports: [ ConfigModule.forRoot({ envFilePath: '.env', }) ], useFactory: async (configService: ConfigService) => ({ type: 'postgres', host: configService.">
+<meta name=twitter:description content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45  import { ClassSerializerInterceptor, Module } from '@nestjs/common'; import { APP_INTERCEPTOR } from '@nestjs/core'; import { TypeOrmModule } from '@nestjs/typeorm'; import { AuthModule } from '.">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RS9P1M1Z2P"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-RS9P1M1Z2P',{anonymize_ip:!1})}</script>
 <title>Postgres database config in Nestjs TypeORM with official pkg @nestjs/config - Husnaram</title><meta name=description content>
-<link rel=stylesheet href="https://husnaram.github.io/css/styles.min.1ef653380784675512c14a4fb8e868a0b78cab40462ab38797f71f15f2a15dd7.css" integrity="sha256-HvZTOAeEZ1USwUpPuOhooLeMq0BGKrOHl/cfFfKhXdc=">
+<link rel=stylesheet href="https://husnaram.github.io/css/styles.min.085d816581335196c491a94492b79fd6e7bdef64520ed269adbb665db504371a.css" integrity="sha256-CF2BZYEzUZbEkalEkref1ue972RSDtJprbtmXbUENxo=">
 <script defer language=javascript type=text/javascript src=https://husnaram.github.io/js/main.js></script><body>
 <div class="text-gray-800 md:w-8/12 md:mx-auto">
 <div class="md:grid md:grid-cols-12">
@@ -52,6 +52,9 @@ a seasoned enthusiast of web developer
 <li>
 <a href=https://husnaram.github.io/tags class="pb-1 border-b-3 border-yellow-400 hover:bg-red-400">Tags</a>
 </li>
+<li>
+<a href=https://husnaram.github.io/snippets class="pb-1 border-b-3 border-yellow-400 hover:bg-red-400">Snippets</a>
+</li>
 </ul>
 </div>
 <div class="text-right pr-3 md:hidden">
@@ -73,6 +76,9 @@ a seasoned enthusiast of web developer
 <li class="border-b-2 border-yellow-500 hover:bg-red-400">
 <a href=https://husnaram.github.io/tags>Tags</a>
 </li>
+<li class="border-b-2 border-yellow-500 hover:bg-red-400">
+<a href=https://husnaram.github.io/snippets>Snippets</a>
+</li>
 </ul>
 </div>
 </header><section class="pt-5 pb-3 px-2 border-t-8 border-l-8 border-r-8 border-yellow-100 text-sm space-y-6 md:px-3 md:text-base">
@@ -82,11 +88,60 @@ a seasoned enthusiast of web developer
 <span>/</span>
 <a href=https://husnaram.github.io/snippets class="border-b-3 border-yellow-500 pb-0.5 hover:bg-red-400">snippets</a>
 </div>
-<h2 class="mb-2 text-3xl text-mono font-bold tracking-wide post-title">
+<h2 class="mb-2 text-xl text-mono font-bold tracking-wide post-title">
 Postgres database config in Nestjs TypeORM with official pkg @nestjs/config
 </h2>
 </div>
-<article class="prose max-w-none pt-2 pb-2"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript><span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>ClassSerializerInterceptor</span>, <span style=color:#a6e22e>Module</span> } <span style=color:#66d9ef>from</span> <span style=color:#e6db74>&#39;@nestjs/common&#39;</span>;
+<article class="prose max-w-none pt-2 pb-2"><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-typescript data-lang=typescript><span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>ClassSerializerInterceptor</span>, <span style=color:#a6e22e>Module</span> } <span style=color:#66d9ef>from</span> <span style=color:#e6db74>&#39;@nestjs/common&#39;</span>;
 <span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>APP_INTERCEPTOR</span> } <span style=color:#66d9ef>from</span> <span style=color:#e6db74>&#39;@nestjs/core&#39;</span>;
 <span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>TypeOrmModule</span> } <span style=color:#66d9ef>from</span> <span style=color:#e6db74>&#39;@nestjs/typeorm&#39;</span>;
 <span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>AuthModule</span> } <span style=color:#66d9ef>from</span> <span style=color:#e6db74>&#39;./auth/auth.module&#39;</span>;
@@ -130,7 +185,9 @@ Postgres database config in Nestjs TypeORM with official pkg @nestjs/config
     }
   ],
 })
-<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AppModule</span> {}</code></pre></div>
+<span style=color:#66d9ef>export</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AppModule</span> {}</code></pre></td></tr></table>
+</div>
+</div>
 </article>
 <ul class="lowercase pb-4 text-sm space-x-2 flex post-tags">
 <li class=ml-2>
