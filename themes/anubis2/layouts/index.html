@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="intro">
+    <h3>hi, folks!</h3>
+    <p>Writing has become a busy and tiring activity, so I put some or all of my thoughts into it 🤣</p>
+</div>
+
+<div class="homepage-content">
+    {{ .Content }}
+</div>
+
+<div class="articles h-feed">
+    {{ $pages := where (where site.RegularPages "Type" "in" site.Params.mainSections) "Params.hidden" "!=" true }}
+    {{ range (.Paginate $pages).Pages }}
+    {{ partial "post-summary.html" . }}
+    {{ end }}
+    {{ partial "pagination.html" . }}
+</div>
+
+{{ end }}

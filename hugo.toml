@@ -1,0 +1,19 @@
+baseURL = 'https://husnaram.site/'
+languageCode = 'en-us'
+title = 'husna ramadan'
+theme = "anubis2"
+
+[author]
+name = "husna ramadan"
+
+[markup.goldmark.renderer]
+unsafe = true # Enable unsafe mode to have a better experience
+
+[markup.highlight]
+style = 'base16-snazzy' # Highlight.js style
+
+[menus]
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 10
