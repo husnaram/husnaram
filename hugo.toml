@@ -1,10 +1,10 @@
 baseURL = 'https://husnaram.site/'
 languageCode = 'en-us'
-title = 'husna ramadan'
+title = 'Husnaram'
 theme = "anubis2"
 
 [author]
-name = "husna ramadan"
+name = "Husna Ramadan"
 
 [markup.goldmark.renderer]
 unsafe = true # Enable unsafe mode to have a better experience
